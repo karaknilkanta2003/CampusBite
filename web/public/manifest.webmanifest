@@ -1,0 +1,12 @@
+{
+  "name": "CampusBite",
+  "short_name": "CampusBite",
+  "description": "Order ahead, skip the queue and see how busy each campus canteen is.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F6F8",
+  "theme_color": "#2B4ACB",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

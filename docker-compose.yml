@@ -1,0 +1,17 @@
+# docker compose up -d --build
+# Then point your college reverse proxy (HTTPS) at port 8080.
+services:
+  campusbite:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      DATABASE_PATH: /data/campusbite.db
+    ports:
+      - "8080:8080"
+    volumes:
+      - campusbite-data:/data
+
+volumes:
+  campusbite-data:

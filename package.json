@@ -1,0 +1,28 @@
+{
+  "name": "campusbite",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Real-time canteen ordering, crowd and pickup platform for a college campus",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:lan": "node scripts/dev.mjs --lan",
+    "share": "node scripts/share.mjs",
+    "dev:server": "npm run dev --workspace server",
+    "dev:web": "npm run dev --workspace web",
+    "build": "npm run build --workspace web",
+    "start": "npm run start --workspace server",
+    "test": "npm test --workspace server",
+    "typecheck": "npm run typecheck --workspace server && npm run typecheck --workspace web"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "devDependencies": {
+    "cloudflared": "^0.7.3",
+    "qrcode-terminal": "^0.12.0"
+  }
+}

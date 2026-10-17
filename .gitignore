@@ -1,0 +1,53 @@
+# ---------- Dependencies ----------
+node_modules/
+# The cloudflared npm package downloads a ~55 MB binary into node_modules; never commit it.
+.npm/
+.pnpm-store/
+
+# ---------- Build output ----------
+dist/
+web/dist/
+*.tsbuildinfo
+.vite/
+coverage/
+
+# ---------- Secrets and local settings ----------
+# .env holds JWT_SECRET, Razorpay keys, SMTP password and VAPID private key.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------- Local database (demo data, orders, sign-ins) ----------
+data/
+server/data/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# ---------- Logs ----------
+*.log
+logs/
+npm-debug.log*
+dev.log
+share-*.log
+
+# ---------- Tunnels (npm run share) ----------
+cloudflared.exe
+.cloudflared/
+# Stray file Git-for-Windows ssh can create when pointed at the NUL device
+NUL
+
+# ---------- OS and editor files ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
